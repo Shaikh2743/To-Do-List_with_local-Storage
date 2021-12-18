@@ -1,0 +1,118 @@
+.form-inner{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 35px 50px rgb(194 195 214 / 50%);
+}
+
+input{
+    font-size: 18px;
+    letter-spacing: -.25px;
+    background-color: transparent;
+    border-color: transparent;
+    width: 100%;
+    position: relative;
+
+}
+input:focus{
+    outline: none;
+}
+
+.todo-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 540px;
+    margin-top: 25px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 35px 50px rgb(194 195 214 / 50%);
+}
+
+ul{
+    list-style: none;
+    display: block;
+}
+
+li{
+    border-bottom: 1px solid #e4e5f1;
+    color: #777a92;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    letter-spacing: -.25px;
+    outline-color: #3a7bfd;
+    background-color: white;
+}
+
+
+.item-check {
+    display: inline-block;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    border: 1px solid #e4e5f1;
+    margin-right: 12px;
+
+
+    -webkit-appearance: none;
+    position: relative;
+    margin-right: 5%;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: transparent;
+    border: 1px solid #adb1d9;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    
+}
+.item-check:checked{
+    /* display: inline-block;
+    border-radius: 50%;
+    height: 24px; */
+    /* width: 24px; */
+    background: linear-gradient(
+        160deg, #ff6a6a 0%, #59abff 23%, #c641fc 98%);
+    /* border: 1px solid #e4e5f1;
+    margin-right: 12px; */
+}
+
+svg{
+    position: absolute;
+    right: 5%;
+}
+
+.todo-footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+}
+
+.todo-footer>button{
+    font-size: 14px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    color: #777a92;
+}
+button {
+    margin-left: 1rem;
+    border: none;
+    color: #cacde8;
+    background: transparent;
+}
+button:focus{
+    color: #3a7bfd;
+}
