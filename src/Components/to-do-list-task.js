@@ -36,7 +36,7 @@ export default function Form() {
     var cboxs = document.getElementsByClassName("task-list-item-checkbox");
   for (var i = 0; i < cboxs.length; i++) {
 
-    if (cboxs[i].checked) {
+    if (cboxs[i].checked==false) {
       cboxs[i].closest(".task-list-item").style.textDecoration = "";
     }
     else {
@@ -52,7 +52,7 @@ export default function Form() {
         }
         else{
             setItems([...items,{text: inputData,completed: false, id: new Date().getTime()}]);
-            setInputData('').style.textDecoration = "line-through";
+            // setInputData('').style.textDecoration = "line-through";
         }    
     }
 
