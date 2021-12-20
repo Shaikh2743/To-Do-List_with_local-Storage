@@ -45,6 +45,7 @@ img{
 @media (min-width:30px) and (max-width:767px) {
   .main-container {
     max-width: 540px;
-    margin: 0 10%;
+    margin: 0 11%;
 }
+
 }
