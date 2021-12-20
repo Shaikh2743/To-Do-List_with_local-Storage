@@ -33,22 +33,22 @@ export default function Form() {
 
         }
     }
-    var cboxs = document.getElementsByClassName("task-list-item-checkbox");
-  for (var i = 0; i < cboxs.length; i++) {
+//     var cboxs = document.getElementsByClassName("task-list-item-checkbox");
+//   for (var i = 0; i < cboxs.length; i++) {
 
-    if (cboxs[i].checked==false) {
-      cboxs[i].closest(".task-list-item").style.textDecoration = "";
-    }
-    else {
-      cboxs[i].closest(".task-list-item").style.textDecoration = "line-through";
-    }
-  }
+//     if (cboxs[i].checked==false) {
+//       cboxs[i].closest(".task-list-item").style.textDecoration = "line-through";
+//     }
+//     else {
+//       cboxs[i].closest(".task-list-item").style.textDecoration = "";
+//     }
+//   }
 
     const addItem = (e)=> {
 
         e.preventDefault();
-        if(!inputData){
-            alert('Enter Any To-do');
+        if(!inputData || inputData.trim().length == 0){
+            alert('Enter Some To-do');
         }
         else{
             setItems([...items,{text: inputData,completed: false, id: new Date().getTime()}]);
@@ -107,12 +107,6 @@ export default function Form() {
         setItems(updatedTodos);
       };
 
-
-
-   
-
-
-    
 
     return (
         <div>
