@@ -1,4 +1,4 @@
-.form-inner{
+.Main-form{
     width: 100%;
     background: #fff;
     display: flex;
@@ -38,7 +38,7 @@ ul{
     display: block;
 }
 
-li{
+.li-white {
     border-bottom: 1px solid #e4e5f1;
     color: #777a92;
     position: relative;
@@ -52,6 +52,20 @@ li{
     outline-color: #3a7bfd;
     background-color: white;
 }
+.li-dark{
+    border-bottom: 1px solid #393a4c;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    letter-spacing: -.25px;
+    outline-color: #3a7bfd;
+    background-color: #25273c;
+}
 
 
 .item-check {
@@ -63,7 +77,7 @@ li{
     height: 20px;
     border-radius: 100%;
     background: transparent;
-    border: 1px solid #c8cbf0;
+    border: 1px solid #adb1d9;
     cursor: pointer;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     
@@ -91,7 +105,7 @@ svg{
     fill: red;
 }
 
-.todo-footer{
+.footer{
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -100,7 +114,7 @@ svg{
     background-color:white;
 }
 
-.todo-footer>button{
+.footer>button{
     font-size: 14px;
     font-weight: 700;
     background: transparent;
@@ -121,8 +135,15 @@ button:active{
     color: #3a7bfd;
 }
 
+.svg-black{
+    position: absolute;
+    right: 5%;
+    fill: #cacde8;
+}
+
+
 @media (min-width:30px) and (max-width:767px) {
-    .todo-footer{
+    .footer{
         padding: 20px;
         display: flex;
         flex-direction: column;

@@ -1,15 +1,18 @@
-import React,{/* useState,useEffect */} from 'react'
+import React,{ useState } from 'react'
 
 import './App.css';
 
 import Form from './Components/to-do-list-task';
 
 function App() {
+  const [IsActive,setActive]=useState("false");
 
 const themeChange = () =>{
+  setActive(!IsActive);
   var img1=document.getElementById('image');
   
   if (img1.src.match("images/icon-moon.svg")  ) {
+    document.body.querySelector(".input").style.color="white";
     img1.src = "images/icon-sun.svg";
     document.body.style.backgroundColor= '#25273c';
     document.body.style.backgroundImage="url('/images/bg-desktop-dark.jpg')";
@@ -20,18 +23,18 @@ const themeChange = () =>{
       x[i].style.backgroundColor = "#25273c";
       x[i].style.borderBottom = "1px solid #393a4c";
     } 
-    document.querySelector('.todo-footer').style.backgroundColor="#25273c";
-    document.querySelector('.form-inner').style.backgroundColor="#25273c";
+    document.querySelector('.footer').style.backgroundColor="#25273c";
+    document.querySelector('.Main-form').style.backgroundColor="#25273c";
     var y= document.getElementsByClassName('svg');
     var j;
     for (j = 0; j < y.length; j++) {
       y[j].style.fill="#cacde8";
     } 
 
-
 } 
 else {
     img1.src = "images/icon-moon.svg";
+    document.body.querySelector(".input").style.color="black";
     document.body.style.backgroundColor='white';
     document.body.style.backgroundImage="url('/images/bg-desktop-light.jpg')"
     document.body.querySelector('.todo-list-wrapper').style.boxShadow = "0 35px 50px rgb(194 195 214 / 50%)";
@@ -41,8 +44,8 @@ else {
       x[i].style.backgroundColor = "white";
       x[i].style.borderBottom = "1px solid #e4e5f1";
     } 
-    document.querySelector('.todo-footer').style.backgroundColor="white";
-    document.querySelector('.form-inner').style.backgroundColor="white";
+    document.querySelector('.footer').style.backgroundColor="white";
+    document.querySelector('.Main-form').style.backgroundColor="white";
 
     var y= document.getElementsByClassName('svg');
     var j;
@@ -63,10 +66,10 @@ else {
       <div className="header">
             <h1>TODO</h1>
           
-            <img src="images/icon-moon.svg" id="image" onClick={themeChange}/>
+            <img src="images/icon-moon.svg" alt="moon-svg" id="image" onClick={themeChange}/>
             
         </div>
-      <Form/>
+      <Form IsActive={IsActive} setActive={setActive} />
 
      </div>
    </div>
