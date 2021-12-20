@@ -26,7 +26,6 @@ const themeChange = () =>{
     var j;
     for (j = 0; j < y.length; j++) {
       y[j].style.fill="#cacde8";
-    
     } 
 
 
