@@ -132,7 +132,7 @@ export default function Form() {
                                 <li key={i} className="lists task-list-item">
                                 <input type="checkbox" className="item-check task-list-item-checkbox" checked={el.completed}   onClick={() => completeHandler(el.id)}/>
                                 <span style={el.completed?{textDecoration:"line-through"}:null}>{el.text}</span>  
-                                <svg xmlns="http://www.w3.org/2000/svg"className="svg" width="18" height="18"onClick={() => del(i)}><path  d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="svg svg-circle" width="18" height="18"onClick={() => del(i)}><path  d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"></path></svg>
                             </li>
                             )
                            
