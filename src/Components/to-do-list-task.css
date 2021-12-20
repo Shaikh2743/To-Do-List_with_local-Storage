@@ -94,6 +94,7 @@ svg{
 .todo-footer{
     padding: 20px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color:white;
@@ -118,4 +119,16 @@ button:focus{
 }
 button:active{
     color: #3a7bfd;
+}
+
+@media (min-width:30px) and (max-width:767px) {
+    .todo-footer{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color:white;
+    }
+    
 }
