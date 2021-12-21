@@ -8,7 +8,7 @@ function App() {
   const [IsActive,setActive]=useState("false");
 
 const themeChange = () =>{
-  setActive(!IsActive);
+  setActive(!IsActive);                                                                                                                
   var img1=document.getElementById('image');
   
   if (img1.src.match("images/icon-moon.svg")  ) {
